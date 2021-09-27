@@ -20,7 +20,12 @@
                     </list>
                 </property>
             </bean>
-            <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+
+    <!--    Spring4.1.1去掉了MappingJacksonHttpMessageConverter
+            spring-mvc配置将MappingJacksonHttpMessageConverter改成MappingJackson2HttpMessageConverter，
+            Maven对org.codehaus.jackson的引用，改用 com.fasterxml.jackson.core
+    -->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
                 <property name="supportedMediaTypes">
                     <list>
                         <value>application/json;charset=UTF-8</value>
