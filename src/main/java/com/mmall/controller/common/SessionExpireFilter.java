@@ -12,7 +12,7 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@WebFilter(filterName = "SessionExpireFilter",urlPatterns = "*.do")
+@WebFilter(filterName = "SessionExpireFilter",urlPatterns = {"*.do"})
 public class SessionExpireFilter implements Filter {
 
 
