@@ -29,6 +29,7 @@ public class UserSpringSessionController {
     @ResponseBody
     public ServerResponse<User> login(String username, String password, HttpSession session){
        //service--》mybatis dao
+
         ServerResponse<User> response = iUserService.login(username,password);
         if (response.isSuccess()){
             session.setAttribute(Const.CURRENT_USER,response.getData());
