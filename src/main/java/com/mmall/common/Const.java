@@ -148,6 +148,8 @@ public class Const {
     }
 
 
-
+    public interface REDIS_LOCK {
+        String COLSE_ORDER_TASK_LOCK = "COLSE_ORDER_TASK_LOCK";//关闭订单的分布式锁
+    }
 
 }

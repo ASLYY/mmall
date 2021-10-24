@@ -46,7 +46,7 @@ public class OrderController {
         }
         String userJsonStr = RedisPoolUtil.get(loginToken);
         User user = JsonUtil.String2Obj(userJsonStr,User.class);
-        if(user ==null){
+        if(user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
         }
 
@@ -111,7 +111,7 @@ public class OrderController {
         }
         String userJsonStr = RedisPoolUtil.get(loginToken);
         User user = JsonUtil.String2Obj(userJsonStr,User.class);
-        if(user ==null){
+        if(user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
         }
 
